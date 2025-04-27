@@ -1,0 +1,39 @@
+body {
+    background: black;
+    color: white;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#fightCanvas {
+    background: black;
+    border: 4px solid white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#hp {
+    color: white;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    font-size: 1.5em;
+}

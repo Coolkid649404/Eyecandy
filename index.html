@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DO YOU WANNA PLAY?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <p id="line1" class="hidden">Hi there,</p>
+        <p id="line2" class="hidden">DO YOU WANNA PLAY?</p>
+        <p id="line3" class="hidden">well here’s a game for you…</p>
+    </div>
+
+    <script>
+        const lines = [
+            document.getElementById('line1'),
+            document.getElementById('line2'),
+            document.getElementById('line3')
+        ];
+
+        let delay = 0;
+
+        lines.forEach((line, index) => {
+            setTimeout(() => {
+                line.classList.remove('hidden');
+                line.classList.add('fade-in');
+            }, delay);
+            delay += 2000;
+        });
+
+        setTimeout(() => {
+            alert('Get Ready...');
+        }, delay + 1000); // Wait a bit after last line
+    </script>
+</body>
+</html>
